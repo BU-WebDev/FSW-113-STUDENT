@@ -73,7 +73,16 @@ for (let i = 0; i < months.length; i++) {
     newOptions.setAttribute("value", months.indexOf(months[i]));
     select.append(newOptions);
 }
-printCalendar();
+printCalendar(months[i]);
+
+/* Was trying to reset to chosen month!
+document.getElementById("#go").addEventListener("onClick", myFunction);
+
+function myFunction() {
+    var x = document.getElementById("#go");
+    return x.printCalendar(months[i]).reset();
+}
+*/
 
 /* !  Directions
 1 modify this script to populate the month select you create in the HTML page from an array of month names
