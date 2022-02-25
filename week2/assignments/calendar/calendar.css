@@ -48,6 +48,15 @@ body {
     background-color: #0005;
 }
 
+.paragraph {
+    text-align: center;
+    font-size: 2px;
+}
+
+.new {
+    text-align: center;
+}
+
 input {
     border: 1px solid silver;
 }
