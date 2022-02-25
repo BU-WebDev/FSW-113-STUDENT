@@ -67,15 +67,15 @@ let largeItems = parts.filter(function (item) {
     return item.aisle === "S" && "U" && "T";
 });
 
-let aislesut = "<div>forklift: <br> <div>(reserve forklift)";
+let aisleSUT = "<div>forklift: <br> <div>(reserve forklift)";
 if (largeItems.length >= 1) {
     largeItems.forEach(function (aisle) {
-        aislesut = `<div>Item:(${aisle.partNbr} / ${aisle.qty})`;
-        aislesut += "</div>";
-        document.querySelector("#forkliftNeeded").innerHTML = aislesut;
+        aisleSUT = `<div>Item:(${aisle.partNbr} / ${aisle.qty})`;
+        aisleSUT += "</div>";
+        document.querySelector("#forkliftNeeded").innerHTML = aisleSUT;
     });
 } else {
-    document.querySelector("#forkliftNeeded").reset();
+    document.querySelector("#forkliftNeeded").remove();
 }
 
 let totalItems = parts.reduce(function (currentTotal, quantity) {
