@@ -1,3 +1,6 @@
+/* ! I added partNbr: "R5AQDVU", partDescr: "Halbendozer", aisle: "S", qty: 14 },
+To forkLift menu */
+
 const parts = [
     { partNbr: "R5AQDVU", partDescr: "Halbendozer", aisle: "S", qty: 14 },
     { partNbr: "LJBKC0M", partDescr: "Knudleknorp", aisle: "H1", qty: 12 },
@@ -64,7 +67,7 @@ let largeItems = parts.filter(function (item) {
     return item.aisle === "S" && "U" && "T";
 });
 
-let aislesut = "<div>Forklift: <br> <div>(reserve forklift)";
+let aislesut = "<div>forklift: <br> <div>(reserve forklift)";
 if (largeItems.length >= 1) {
     largeItems.forEach(function (aisle) {
         aislesut = `<div>Item:(${aisle.partNbr} / ${aisle.qty})`;
@@ -72,7 +75,7 @@ if (largeItems.length >= 1) {
         document.querySelector("#forkliftNeeded").innerHTML = aislesut;
     });
 } else {
-    document.querySelector("#forkliftNeeded").remove();
+    document.querySelector("#forkliftNeeded").reset();
 }
 
 let totalItems = parts.reduce(function (currentTotal, quantity) {
