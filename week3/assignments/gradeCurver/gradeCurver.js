@@ -1,3 +1,5 @@
+//!    JavaScript Page
+
 document.querySelector("#submit").addEventListener("click", curveGrades);
 
 document.querySelector("#reset").addEventListener("click", function () {
