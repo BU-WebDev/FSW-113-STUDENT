@@ -26,7 +26,7 @@ function displayTemp(city) {
     document.getElementById('tempData').innerHTML = getFahren(citiesTemp, cityLocation)
     document.getElementById('weatherWrapper').style.backgroundColor = getDaylight(city.data.sys.sunrise, city.data.sys.sunset, city.data.dt)
     document.getElementById('humidData').innerHTML = city.data.main.humidity
-    document.getElementById('conditionsData').innerHTML = city.data.weather.main.description
+    document.getElementById('conditionsData').innerHTML = city.data.weather[0].main.description
 }
 
 document.getElementById('goBttn').addEventListener('click', function(e){
